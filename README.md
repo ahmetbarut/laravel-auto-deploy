@@ -2,7 +2,7 @@
 
 This package is designed to automate the deployment process of Laravel applications. It provides a series of commands and configurations that help streamline the deployment workflow, reducing the time and effort required to keep your application up-to-date and running smoothly.
 
-## Usage
+## Usage
 
 After the initial deployment of your application, you need to create a `webhook` for your project.
 
