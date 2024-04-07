@@ -4,7 +4,7 @@ This package is designed to automate the deployment process of Laravel applicati
 
 ## Usage
 
-Uygulamanızıın ilk dağıtımını yaptıktan sonra, projenize `webhook` oluşturmanız gereklidir.
+After the initial deployment of your application, you need to create a `webhook` for your project.
 
 ```shell
 php artisan auto-deploy:generate-webhook-key
