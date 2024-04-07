@@ -24,5 +24,7 @@
             "name": "Ahmet Barut",
             "email": "ahmetbarut588@gmail.com"
         }
-    ]
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "stable"
 }
