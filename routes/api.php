@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Route;
 
 Route::match(['get', 'post'], '/api/laravel-auto-deploy/{webhook:secret}', function (Webhook $webhook) {
-    dd($webhook);
+
     if (!$webhook->verifyKey(request()->route('webhook')->secret)) {
         return response('Unauthorized', 401);
     }
