@@ -22,4 +22,16 @@ Your webhook url: https://laravel-auto-deploy.test/api/laravel-auto-deploy/dbe02
 
 ```shell
 composer require ahmetbarut/laravel-auto-deploy
+
+# After the package is installed
+
+php artisan auto-deploy:install
+```
+
+### Config
+
+If you want to change the model or table name, you can modify them using these variables in your `.env` file:
+```env
+AUTO_DEPLOY_TABLE=same_table
+AUTO_DEPLOY_MODEL=SameModel
 ```

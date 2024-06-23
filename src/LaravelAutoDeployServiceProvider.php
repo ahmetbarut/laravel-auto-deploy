@@ -14,12 +14,17 @@ class LaravelAutoDeployServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Commands\GenerateWebhookKeyCommand::class,
+                
             ]);
         }
+
+        $this->app->bind('auto-deploy-model', function () {
+            return config('auto-deploy.model');
+        });
     }
 
     public function register()
     {
-        //
+        $this->mergeConfigFrom(__DIR__ . '/../config/auto-deploy.php', 'auto-deploy');
     }
 }

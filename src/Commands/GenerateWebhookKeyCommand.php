@@ -35,8 +35,10 @@ class GenerateWebhookKeyCommand extends Command
         if (! $name = $this->option('name')) {
             $name = 'Auto Deployment';
         }
-        
-        $webhook = Webhook::create([
+
+        $model = app('auto-deploy-model');
+
+        $webhook = $model::create([
             'name' => $name,
             'url' => $url,
         ]);

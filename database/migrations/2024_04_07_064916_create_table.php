@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('webhooks', function (Blueprint $table) {
+        Schema::create(config('auto-deploy.table'), function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('url');
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('webhooks');
+        Schema::dropIfExists(config('auto-deploy.table'));
     }
 };
